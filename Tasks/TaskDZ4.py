@@ -18,3 +18,5 @@ else: print("no")
 #     print("yes")
 # else: print("no")
 
+text = "привет"
+print(len(text))
