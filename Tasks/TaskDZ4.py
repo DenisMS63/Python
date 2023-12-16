@@ -17,6 +17,3 @@ else: print("no")
 # if c % 2 == 0 and res % 2 == 0:
 #     print("yes")
 # else: print("no")
-
-text = "привет"
-print(len(text))
