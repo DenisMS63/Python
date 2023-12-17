@@ -3,10 +3,10 @@
 # то выводит -1
 
 n = int(input("Введите число: "))
-f1 = 0
+f1 = 1
 f2 = 1
 f3 = f1 + f2
-count = 3
+count = 4
 
 while f3 < n:
      f1 = f2
@@ -18,3 +18,4 @@ if f3 == n:
      print(count)
 else: print(-1)
 
+# через множественное присваивание

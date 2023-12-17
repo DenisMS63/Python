@@ -1,7 +1,6 @@
 import random
 
 num = int(input("Введите кол-во чисел: "))
-
 min_num = 0
 max_num = 1000
 
