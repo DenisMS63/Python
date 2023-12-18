@@ -15,3 +15,6 @@ for i in range(n):
     list_1.insert(0, last_num)
 
 print(list_1)
+
+# Срезы
+print(list_1[-n:] + list_1[:-n])
