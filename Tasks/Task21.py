@@ -11,6 +11,9 @@ unique_value = set()
 
 for cur_dict in list_dict:
     for key in cur_dict:
-        unique_value.add(cur_dict[key])
+    # for key in cur_dict.keys():
+    # for value in cur_dict.values():
+        # unique_value.add(value.strip())
+        unique_value.add(cur_dict[key].strip())
     
 print(unique_value)
