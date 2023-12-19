@@ -12,16 +12,23 @@ start_time = time.time()
 s = 12
 p = 27
 
-solutions = []
-for i in range(1, 1001):
-    for j in range(1, 1001):
-        if s == i + j and p == i * j:
-            solutions.append((min(i, j), max(i, j)))
-solutions = list(set(solutions))
+# solutions = []
+# for i in range(1, 1001):
+#     for j in range(1, 1001):
+#         if s == i + j and p == i * j:
+#             solutions.append((min(i, j), max(i, j)))
+# solutions = list(set(solutions))
 
-for solution in solutions:
-    print(solution[0], solution[1])
+# for solution in solutions:
+#     print(solution[0], solution[1])
 
-end_time = time.time()
-execution_time = end_time - start_time
-print("Время выполнения кода: %s секунд" % execution_time)
+# end_time = time.time()
+# execution_time = end_time - start_time
+# print("Время выполнения кода: %s секунд" % execution_time)
+
+for i in range(1000):
+    for j in range(999, 0, -1):
+        if i + j == s and i * j == p:
+            x = j
+            y = i
+print(x, y)
