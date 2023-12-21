@@ -6,17 +6,20 @@
 # k = 6
 # 5
 
-list_1 = [2, 4, 1, 6, 8, 2, 9, 3, 2, 5]
-# k = int(input("Введите число для поиска: "))
+list_1 = [2, 4, 1, 6, 8, 2, 9, 2, 5]
+k = int(input("Введите число для поиска: "))
+
+max_list_1 = max(list_1)
+num = 0
+
+for i in list_1:
+    diff = abs(i - k)
+    if diff < max_list_1:
+        num = i
+        max_list_1 = diff
 
 
-for i in range(len(list_1)):
-    if i == 0: 
-        continue
-
-    print(list_1[i])
-
-    
+print(num)   
     
 
 
