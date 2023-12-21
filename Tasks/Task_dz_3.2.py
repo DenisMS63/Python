@@ -18,7 +18,6 @@ for i in list_1:
         num = i
         max_list_1 = diff
 
-
 print(num)   
     
 
