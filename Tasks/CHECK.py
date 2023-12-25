@@ -5,3 +5,8 @@ def suma_num(n):
     print(summa)
 
 suma_num(5)
+
+#######################################################
+
+for (index, element) in enumerate("Hello"):
+    print(index, element, sep=" is ",end=" | ")
