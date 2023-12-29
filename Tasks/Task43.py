@@ -26,6 +26,6 @@ print(list_1)
 
 count = 0
 for i in range(size - 1):
-    count += list_1[i + 1:].count(list_1[i])
+    count += list_1[i + 1:].count(list_1[i])   # метод count считает сколько раз встречается list_1[i] в list_1[i + 1:] (оставшейся части списка)
 
 print(count)
