@@ -25,5 +25,5 @@ size = int(input("Введите предельное число: "))
 
 for num1 in range(1, size):
     for num2 in range(1, size):
-        if sum_dividers(num1) == num2 and sum_dividers(num2) == num1 and num1 < num1:
+        if sum_dividers(num1) == num2 and sum_dividers(num2) == num1 and num1 > num1:
             print(num1, num2)
