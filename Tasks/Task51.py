@@ -12,12 +12,26 @@
 # else:
 # print(‘different’)
 
+# def same_by(characteristic, objects):
+#     if not objects:
+#         return True
+#     print(*map(characteristic, objects))
+#     return all(map(characteristic, objects))
+
+# values = [0, 2, 10, 6] 
+
+# if same_by(lambda x: x % 2 == 0, values):
+#     print("same")
+# else:
+#     print("different")
+
+# РЕШЕНИЕ 2
+    
 def same_by(characteristic, objects):
     if not objects:
         return True
-    print(*map(characteristic, objects))
-    return all(map(characteristic, objects))
-
+    print(set(map(characteristic, objects)))
+    return len(set(map(characteristic, objects))) == 1      # если все True, то множество будет равно 1 (только True), иначе будет равно 2 (True и False)
 
 values = [0, 2, 10, 6] 
 
