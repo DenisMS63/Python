@@ -43,11 +43,9 @@
 # РЕШЕНИЕ 3
 
 def same_by(characteristic, objects):
-    if not objects:
-        return True
     res = list(filter(characteristic, objects))   # получаем элементы
     print(res)
-    return res == objects     # если все True, то множество будет равно 1 (только True), иначе будет равно 2 (True и False)
+    return res == objects or not res     # если все True, то множество будет равно 1 (только True), иначе будет равно 2 (True и False)
 
 values = [0, 2, 10, 6] 
 
