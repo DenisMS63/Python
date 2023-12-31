@@ -27,11 +27,27 @@
 
 # РЕШЕНИЕ 2
     
+# def same_by(characteristic, objects):
+#     if not objects:
+#         return True
+#     print(set(map(characteristic, objects)))
+#     return len(set(map(characteristic, objects))) == 1      # если все True, то множество будет равно 1 (только True), иначе будет равно 2 (True и False)
+
+# values = [0, 2, 10, 6] 
+
+# if same_by(lambda x: x % 2 == 0, values):
+#     print("same")
+# else:
+#     print("different")
+
+# РЕШЕНИЕ 3
+
 def same_by(characteristic, objects):
     if not objects:
         return True
-    print(set(map(characteristic, objects)))
-    return len(set(map(characteristic, objects))) == 1      # если все True, то множество будет равно 1 (только True), иначе будет равно 2 (True и False)
+    res = list(filter(characteristic, objects))   # получаем элементы
+    print(res)
+    return res == objects     # если все True, то множество будет равно 1 (только True), иначе будет равно 2 (True и False)
 
 values = [0, 2, 10, 6] 
 
