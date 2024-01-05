@@ -17,8 +17,8 @@
 # 3. Вывести данные на экран:                            +
 #     - открыть файл в режиме чтения (режим: r)         +
 #     - вывести информацию на экран                     +
-# 4. Поиск данных:
-#     - запросить вариант поиска
+# 4. Поиск данных:                                       +
+#     - запросить вариант поиска                        +
 #     - запросить данные поиска                         +
 #     - открыть файл в режиме чтения (режим: r)         +
 #     - сохранить данные в переменную                   +
@@ -56,7 +56,13 @@ def add_contact(contact):
 
 def show_info():
     with open("phonebook.txt", "r", encoding="UTF-8") as file:
-        print(file.read())
+        list_contact = file.read().rstrip().split("\n\n")
+        for contact in enumerate(list_contact, 1):
+            print(*contact)
+            print()
+
+        # print(file.read())
+        # print(*enumerate(list_contact, 1))                      # каждый контакт нумеруется, начиная с 1
 
 def search_contact():
     how_search = input(
@@ -67,7 +73,7 @@ def search_contact():
         "4. По номеру\n"
         "5. По адресу\n"
         "Ввод: "
-        )
+    )
     
     search = input("Введите данные для поиска: ")
 
@@ -79,7 +85,7 @@ def search_contact():
     print()
 
     with open("phonebook.txt", "r", encoding="UTF-8") as file:
-        list_contact = file.read().rstrip().split("\n\n")
+        list_contact = file.read().rstrip().split("\n\n")       # ф-я rstrip() для того чтобы не получался пустой список и не было ошибки: list out of range
 
     for str_contact in list_contact:
         new_list_contact = str_contact.replace("\n", " ").split()
