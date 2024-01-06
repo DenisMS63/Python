@@ -2,8 +2,8 @@ from date_create import *
 
 def show_info():
     with open("phonebook.txt", "r", encoding="UTF-8") as file:
-        list_contact = file.read().rstrip().split("\n\n")
-        for contact in enumerate(list_contact, 1):
+        list_contact = file.read().rstrip().split("\n\n")       # данные преобразуются в список (массив) за счет ф-ии split()
+        for contact in enumerate(list_contact, 1):              # второй аргумент в ф-ии enumerate это значение с которого начинается нумерация
             print(*contact)                                     # распаковка для вывода в удобном виде с нумирацией
             print()
 
